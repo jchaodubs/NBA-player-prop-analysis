@@ -6,7 +6,7 @@ import subprocess
 
 def git_operation():
     # Change directory to your repo
-    repo_path = '/Users/dhirenshivdasani/Desktop/code/NBA Prediction Model'
+    repo_path = '/Users\18312\Desktop\Files\code\NBA-player-prop-analysis'
     subprocess.run(['git', '-C', repo_path, 'pull'])
     subprocess.run(['git', '-C', repo_path, 'add', '.'])
     subprocess.run(['git', '-C', repo_path, 'commit', '-m', 'Automated data update'])
