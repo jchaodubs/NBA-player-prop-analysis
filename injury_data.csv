@@ -1,3 +1,57 @@
+<<<<<<< HEAD
+Team,Player,Status
+BOS,Kristaps Porzingis,Out
+BOS,Jaden Springer,Out
+BOS,Xavier Tillman,Injured
+BKN,Cam Johnson,Out
+BKN,Day'Ron Sharpe,Not on injury report
+BKN,Dariq Whitehead,Out for season
+OKC,Gordon Hayward,Injured
+OKC,Bismack Biyombo,Out
+ORL,Duncan Robinson,Available
+ORL,Jimmy Butler,Out
+ORL,Terry Rozier,Injured
+ORL,Josh Richardson,Injured
+ORL,Dru Smith,Out for season
+MIA,Duncan Robinson,Available
+MIA,Jimmy Butler,Out
+MIA,Terry Rozier,Injured
+MIA,Josh Richardson,Injured
+MIA,Dru Smith,Out for season
+MIL,Giannis Antetokounmpo,Available
+MIL,Damian Lillard,Available
+MIL,Brook Lopez,Available
+MIL,Pat Connaughton,Available
+MIL,Khris Middleton,Injured
+MIN,Anthony Edwards,Available
+MIN,Jaden McDaniels,Available
+MIN,Wendell Moore Jr.,Out
+MIN,Jaylen Clark,Injured
+POR,Scoot Henderson,In
+POR,Anfernee Simons,In
+POR,Duop Reath,Available
+POR,Malcolm Brogdon,Injured
+POR,Shaedon Sharpe,Injured
+POR,Moses Brown,Injured
+POR,Robert Williams,Out for season
+SAC,Trey Lyles,Out
+SAC,Chris Duarte,Available
+SAC,Sasha Vezenkov,Injured
+PHX,Thaddeus Young,TBD
+PHX,Damion Lee,Injured
+DET,Quentin Grimes,Out
+DET,Evan Fournier,TBD
+DET,Malachi Flynn,TBD
+DET,Tosan Evbuomwan,TBD
+DET,Isaiah Stewart,Injured
+LAL,LeBron James,Available
+LAL,Anthony Davis,Available
+LAL,Spencer Dinwiddie,Available
+LAL,Max Christie,Injured
+LAL,Jarred Vanderbilt,Injured
+LAL,Cam Reddish,Injured
+LAL,Gabe Vincent,Injured
+=======
 Player,Team,Update,Details
 Clint Capela,ATL,"Sun, Feb 4, 2024",Out (Adductor) - The Hawks announced that Capela has a left adductor strain and will be re-evaluated in 7-10 days.
 Mouhamed Gueye,ATL,"Mon, Feb 12, 2024",Out (Back) - Gueye hasn't played since (Oct. 30) he has no timetable for a return.
@@ -87,3 +141,4 @@ Sasha Vezenkov,SAC,"Tue, Feb 13, 2024",Out (Ankle) - The Kings announced that Ve
 Charles Bassey,SAS,"Tue, Dec 12, 2023",Out For Season (Knee) - The San Antonio Spurs announced C Charles Bassey is out for the season with a torn ACL.
 Otto Porter Jr.,UTA,"Tue, Feb 13, 2024",Day To Day (Foot) - Porter Jr. did not play in Monday's (Feb. 12) game against Golden State.
 Isaiah Livers,WAS,"Mon, Feb 12, 2024",Out (Hip) - Livers has yet to make his debut for the Wizards and remains without a timetable to return.
+>>>>>>> cd3579758b19f96d2e6212166b821f6e666ffa8d

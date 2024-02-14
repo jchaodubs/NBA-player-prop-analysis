@@ -1,8 +1,8 @@
-name: Update Data
+name: Update Odds and Team Lineups Data
 
 on:
   schedule:
-    - cron: '0 */1 * * *'
+    - cron: '0 9-18 * * *'
   workflow_dispatch:
   
 jobs:
@@ -18,12 +18,10 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pip install -r requirements.txt  # If you have a requirements.txt
-    - name: Run team_def_vs_pos.py
-      run: python team_def_vs_pos.py
-    - name: Run stats.py
-      run: python stats.py
-    - name: Run injury_data.py
-      run: python injury_data.py
+    - name: Run team_lineups.py
+      run: python team_lineups.py
+    - name: Run scrape_odds.py
+      run: python scrape_odds.py
     - name: Commit and push if there are changes
       run: |
         git config user.email "dhiren3102@gmail.com"
