@@ -1,5 +1,5 @@
 Team,Player,Status
-ATL,Patty Mills,Available
+ATL,Patty Mills,Not on injury report
 ATL,Onyeka Okongwu,Out
 ATL,AJ Griffin,Out
 ATL,Wesley Matthews,Out
@@ -20,16 +20,19 @@ PHI,Robert Covington,Injured
 PHI,De'Anthony Melton,Injured
 NYK,Donte DiVincenzo,Questionable
 NYK,Isaiah Hartenstein,Questionable
+NYK,Bojan Bogdanovic,Questionable
 NYK,Julius Randle,Injured
 NYK,OG Anunoby,Injured
 NYK,Mitchell Robinson,Injured
-ORL,Markelle Fultz,TBD
-BKN,Cam Johnson,Expects to play
+ORL,Markelle Fultz,Out
+ORL,Gary Harris,Out
+BKN,Cam Johnson,Not on injury report
 BKN,Ben Simmons,Out
 BKN,Dariq Whitehead,Out for season
-BOS,Kristaps Porzingis,TBD
-BOS,Al Horford,TBD
-BOS,Jaden Springer,TBD
+BOS,Jaylen Brown,Questionable
+BOS,Kristaps Porzingis,Not on injury report
+BOS,Al Horford,Out
+BOS,Jaden Springer,Out
 BOS,Xavier Tillman,Injured
 CHI,Torrey Craig,Probable
 CHI,Alex Caruso,Questionable
@@ -37,20 +40,24 @@ CHI,Dalen Terry,Probable
 CHI,Patrick Williams,Injured
 CHI,Zach LaVine,Out for season
 CHI,Lonzo Ball,Out for season
+CLE,Darius Garland,Questionable
+CLE,Sam Merrill,Questionable
 CLE,Dean Wade,Questionable
 CLE,Tristan Thompson,Suspended
 CLE,Ty Jerome,Injured
 IND,Tyrese Haliburton,Questionable
+IND,Myles Turner,Questionable
 IND,Bennedict Mathurin,Questionable
 IND,James Johnson,Out
 IND,Jalen Smith,Out
 TOR,RJ Barrett,Questionable
+TOR,Jontay Porter,Questionable
 HOU,Reggie Bullock,Questionable
 HOU,Cam Whitmore,Out
 HOU,Fred VanVleet,Injured
 HOU,Tari Eason,Injured
 HOU,Steven Adams,Out for season
-MEM,GG Jackson,Available
+MEM,GG Jackson,Not on injury report
 MEM,Derrick Rose,Questionable
 MEM,Ziaire Williams,Questionable
 MEM,Jordan Goodwin,TBD
@@ -60,6 +67,7 @@ MEM,Marcus Smart,Injured
 MEM,Brandon Clarke,Injured
 MEM,Jake LaRavia,Injured
 MEM,Ja Morant,Out for season
+WAS,Kyle Kuzma,Questionable
 WAS,Isaiah Livers,Out
 NOP,Zion Williamson,Questionable
 NOP,Cody Zeller,Questionable
@@ -70,22 +78,24 @@ DAL,Kyrie Irving,Probable
 DAL,Dereck Lively II,Questionable
 DAL,Maxi Kleber,Questionable
 DAL,Dante Exum,Out
-DET,Cade Cunningham,TBD
-DET,Quentin Grimes,TBD
+DET,Cade Cunningham,Probable
+DET,Quentin Grimes,Out
 DET,Isaiah Stewart,Injured
 PHX,Thaddeus Young,TBD
 PHX,Bradley Beal,Out
 PHX,Damion Lee,Injured
+LAL,Anthony Davis,Questionable
 LAL,LeBron James,Out
 LAL,Max Christie,Injured
 LAL,Jarred Vanderbilt,Injured
 LAL,Cam Reddish,Injured
 LAL,Gabe Vincent,Injured
-UTA,Otto Porter,Available
-SAC,Trey Lyles,TBD
+UTA,Otto Porter,Not on injury report
+SAC,Trey Lyles,Questionable
 SAC,Sasha Vezenkov,Injured
 DEN,Jamal Murray,Unlikely to play
 DEN,Kentavious Caldwell-Pope,Unlikely to play
+DEN,Julian Strawther,Questionable
 DEN,Vlatko Cancar,Injured
 LAC,Kawhi Leonard,Out
 LAC,PJ Tucker,Out
