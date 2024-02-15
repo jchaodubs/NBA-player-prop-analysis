@@ -622,6 +622,15 @@ def color_ranking_pos(val):
         color = 'green'
     return f'background-color: {color}'
 
+def calculate_ev(row):
+    # Assuming a fixed decimal payout of 2 for demonstration purposes
+    decimal_odds = 2  # This should be calculated based on actual odds
+    p_win = row['Average_Implied_Probability']
+    p_loss = 1 - p_win
+    ev = (p_win * (decimal_odds - 1)) - (p_loss * 1)
+    return round(ev, 2)  # Round to 2 decimal places for readability
+
+
 odds = pd.read_csv('over_under_odds.csv')
 
 dataframe = load_data()
@@ -787,23 +796,41 @@ if view == "Player Prop Analysis":
         
 
         home_away_filter = st.radio("Select Home/Away Games", ["Both", "Home", "Away"])
-        lineup = team_lineups[team_lineups['Team'] == team]['Lineup'].values[0]
+        team_lineup = team_lineups[team_lineups['Team'] == team]['Lineup'].values[0]
+        opponent_lineup = team_lineups[team_lineups['Team'] == opponent]['Lineup'].values[0]
 
-        formatted_lineup = []
-        for player in lineup.split(', '):  # Assuming lineup is a string of comma-separated player names
+
+        formatted_lineup_team = []
+        for player in team_lineup.split(', '):  # Assuming lineup is a string of comma-separated player names
             if player == player_name:
                 # Apply Markdown bold formatting
-                formatted_lineup.append(f"**{player}**")
+                formatted_lineup_team.append(f"**{player}**")
             else:
-                formatted_lineup.append(player)
+                formatted_lineup_team.append(player)
         
         # Join the formatted names back into a string
-        formatted_lineup_str = ', '.join(formatted_lineup)
-        position = extract_position_from_lineup(player_name, lineup)
+        formatted_lineup_team_str = ', '.join(formatted_lineup_team)
+        position_team = extract_position_from_lineup(player_name, team_lineup)
 
-        with st.expander("View Starting Lineup"):
+        formatted_lineup_opp = []
+        for player in opponent_lineup.split(', '):  # Assuming lineup is a string of comma-separated player names
+            if player == player_name:
+                # Apply Markdown bold formatting
+                formatted_lineup_opp.append(f"**{player}**")
+            else:
+                formatted_lineup_opp.append(player)
+        
+        # Join the formatted names back into a string
+        formatted_lineup_opp_str = ', '.join(formatted_lineup_opp)
+        position_opp = extract_position_from_lineup(player_name, opponent_lineup)
+
+        with st.expander("View Team Starting Lineup"):
             # Display the lineup with the selected player's name bolded if they are in the lineup
-            st.markdown(formatted_lineup_str, unsafe_allow_html=True)
+            st.markdown(formatted_lineup_team_str, unsafe_allow_html=True)
+        with st.expander("View Opponent Starting Lineup"):
+            # Display the lineup with the selected player's name bolded if they are in the lineup
+            st.markdown(formatted_lineup_opp_str, unsafe_allow_html=True)
+
 
 
         # Filter data based on Home/Away selection
@@ -816,7 +843,7 @@ if view == "Player Prop Analysis":
 
 
         last_10_games = player_data.drop_duplicates(subset='Game_ID').head(10)
-        last_10_games['POS'] = position
+        last_10_games['POS'] = position_team
 
     
         results, rankings = analyze_prop_bet_enhanced(dataframe, player_name, team, opponent, injured_players, value, selected_prop)
@@ -825,7 +852,7 @@ if view == "Player Prop Analysis":
         
         st.subheader(f'{opponent} Defense vs. Position (Allowed)')
 
-        team_def = team_def[(team_def['Opponent'] ==opponent) & (team_def['Position'] == position)]
+        team_def = team_def[(team_def['Opponent'] ==opponent) & (team_def['Position'] == position_team)]
         print(team_def)
         team_def.set_index(['Position'], inplace = True)
         team_def = team_def[['Points', 'Rebounds', 'Assists']].style.applymap(color_ranking_pos)
@@ -972,6 +999,7 @@ elif view == "Over/Under Stats L10":
   
     combined_df[['Average_Implied_Probability', 'All_Values_Match']] = combined_df.apply(lambda row: calculate_implied_probability_for_value(row), axis=1, result_type="expand")
     combined_df['Average_Implied_Probability'] = combined_df['Average_Implied_Probability'].round(2)
+    combined_df['Expected_Value'] = combined_df.apply(calculate_ev, axis=1)
 
 
     prop_relations = {
@@ -1029,6 +1057,7 @@ elif view == "Over/Under Stats L10":
         """,
         unsafe_allow_html=True
     )
+
 
     st.dataframe(combined_df)    
 
